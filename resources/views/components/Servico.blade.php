@@ -3,7 +3,7 @@
 
         <!-- TÍTULO -->
         <div class="text-start mb-5">
-            <h2 class="fw-bold border-bottom border-warning d-inline-block pb-2 px-3">Serviços°</h2>
+            <h2 class="fw-bold border-bottom border-warning d-inline-block pb-2 px-3">Serviços</h2>
         </div>
 
         <!-- GRID DE SERVIÇOS -->
@@ -47,7 +47,7 @@
             <div class="col-md-6">
                 <div class="bg-white p-3 border h-100">
                     <a href="#semaforica" class="d-block overflow-hidden img-hover-zoom mb-3">
-                        <img src="{{ asset('imagens/SinaSemaforica.jpg') }}" class="img-fluid w-100" alt="Sinalização Semafórica">
+                        <img src="{{ asset('imagens/SInaSemaforica.jpg') }}" class="img-fluid w-100" alt="Sinalização Semafórica">
                     </a>
                     <h5 class="fw-bold">Sinalização Semafórica</h5>
                     <p class="small">“A sinalização semafórica é um subsistema da sinalização viária que se compõe de indicações luminosas acionadas alternada ou intermitentemente por meio de sistema eletromecânico ou eletrônico. Tem a finalidade de transmitir diferentes mensagens aos usuários da via pública.”</p>
