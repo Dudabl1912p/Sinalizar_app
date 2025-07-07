@@ -40,7 +40,7 @@ $agrupadoPorCategoria = Produto::all()->groupBy('categoria');
 
 <div class="mb-4">
     <h5 class="border-start border-warning ps-2 mb-2">Saiba mais</h5>
-    <a href="/Catalogo/Catálogo_Sinalizar.pdf" class="btn btn-dark w-100 mb-2">Catálogo.pdf</a>
+    <a href="{{ asset('Catalogo/Catálogo_Sinalizar.pdf') }}" class="btn btn-dark w-100 mb-2" target="_blank">Catálogo.pdf</a>
 </div>
 
 <div class="mb-4">
