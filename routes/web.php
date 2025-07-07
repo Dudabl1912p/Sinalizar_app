@@ -27,3 +27,10 @@ Route::get('/CatalogoF', function (Request $request) {
 })->name('CatalogoF');
 
 Route::get('/catalogo', [ProdutoCatalogoController::class, 'index'])->name('catalogo');
+
+Route::get('/catalogo_Sinalizar', function () {
+    $path = public_path('Catalogo/Catálogo_Sinalizar.pdf');
+    return response()->file($path, [
+        'Content-Type' => 'application/pdf',
+    ]);
+});
