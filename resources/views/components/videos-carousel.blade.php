@@ -1,3 +1,14 @@
+@php
+    $videos = collect([
+        ['id' => 'dQw4w9WgXcQ', 'titulo' => 'Título do vídeo 1'],
+        ['id' => 'nBtJ21wIqlE', 'titulo' => 'Título do vídeo 2'],
+        ['id' => 'u9Dg-g7t2l4', 'titulo' => 'Título do vídeo 3'],
+        ['id' => 'Wch3gJG2GJ4', 'titulo' => 'Título do vídeo 4'],
+        ['id' => 'ZbZSe6N_BXs', 'titulo' => 'Título do vídeo 5'],
+        ['id' => 'XcQY6Ej2rKw', 'titulo' => 'Título do vídeo 6'],
+    ]);
+@endphp
+
 {{-- CARROSSEL: MOBILE (1 vídeo por slide) --}}
 <div id="carouselVideosMobile" class="carousel slide d-block d-sm-none mb-4" data-bs-ride="carousel">
     <div class="carousel-inner text-center">
