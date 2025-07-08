@@ -7,15 +7,17 @@
         @include('components.videos-carousel')
 
         {{-- Botões de redes sociais --}}
-        <div class="d-flex justify-content-center gap-3 flex-wrap mt-5">
+        <div class="d-flex justify-content-center gap-3 flex-wrap mt-3"> {{-- mt-3 diminui o espaçamento --}}
             <a href="https://www.instagram.com/sinalizarsinalizacao?igsh=NzI0eXB6NnB1c3V5" target="_blank"
-                class="btn btn-outline-warning px-4 py-2 fw-bold d-flex align-items-center gap-2">
+                class="btn btn-outline-warning px-4 py-2 fw-bold d-flex align-items-center justify-content-center gap-2">
                 <i class="fab fa-instagram"></i> Instagram
             </a>
             <a href="https://www.youtube.com/seu_canal" target="_blank"
-                class="btn btn-outline-danger px-4 py-2 fw-bold d-flex align-items-center gap-2">
+                class="btn btn-outline-danger px-4 py-2 fw-bold d-flex align-items-center justify-content-center gap-2">
                 <i class="fab fa-youtube"></i> Youtube
             </a>
         </div>
     </div>
 </section>
+
+
