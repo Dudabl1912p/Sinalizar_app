@@ -7,7 +7,7 @@
         @include('components.videos-carousel')
 
         {{-- Botões de redes sociais --}}
-        <div class="d-flex justify-content-center gap-3 flex-wrap mt-3"> {{-- mt-3 diminui o espaçamento --}}
+        <div class="d-flex justify-content-center gap-3 flex-wrap mt-4"> 
             <a href="https://www.instagram.com/sinalizarsinalizacao?igsh=NzI0eXB6NnB1c3V5" target="_blank"
                 class="btn btn-outline-warning px-4 py-2 fw-bold d-flex align-items-center justify-content-center gap-2">
                 <i class="fab fa-instagram"></i> Instagram
