@@ -1,11 +1,11 @@
 @php
     $videos = collect([
-        ['id' => 'dQw4w9WgXcQ', 'titulo' => 'Título do vídeo 1'],
-        ['id' => 'nBtJ21wIqlE', 'titulo' => 'Título do vídeo 2'],
-        ['id' => 'u9Dg-g7t2l4', 'titulo' => 'Título do vídeo 3'],
-        ['id' => 'Wch3gJG2GJ4', 'titulo' => 'Título do vídeo 4'],
-        ['id' => 'ZbZSe6N_BXs', 'titulo' => 'Título do vídeo 5'],
-        ['id' => 'XcQY6Ej2rKw', 'titulo' => 'Título do vídeo 6'],
+        ['id' => 'dQw4w9WgXcQ', 'titulo' => 'Acompanhe nossas novidades através das nossas midias digitais'],
+        ['id' => 'nBtJ21wIqlE', 'titulo' => 'Profissionalismo, prazo e profissionais de qualidade você só encontra na Sinalizar.'],
+        ['id' => 'u9Dg-g7t2l4', 'titulo' => 'Curta comente e compartilhe nossos conteudos nas midias sociais.'],
+        ['id' => 'Wch3gJG2GJ4', 'titulo' => 'Acompanhe nossas novidades através das nossas midias digitais'],
+        ['id' => 'ZbZSe6N_BXs', 'titulo' => 'Profissionalismo, prazo e profissionais de qualidade você só encontra na Sinalizar.'],
+        ['id' => 'XcQY6Ej2rKw', 'titulo' => 'Curta comente e compartilhe nossos conteudos nas midias sociais.'],
     ]);
 @endphp
 
