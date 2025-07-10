@@ -20,6 +20,6 @@ class ProdutoCatalogoController extends Controller
             })
             ->paginate(12);
 
-        return view('Pages.catalogo', compact('produtos', 'busca', 'categoria'));
+        return view('Pages.CatalogoF', compact('produtos', 'busca', 'categoria'));
     }
 }

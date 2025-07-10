@@ -21,12 +21,13 @@ Route::get('/CatalogoF', function (Request $request) {
         $query->where('nome', 'like', '%' . $request->busca . '%');
     }
 
-    $produto = $query->paginate(12);
+    $produtos = $query->paginate(12);
 
     return view('Pages.CatalogoF', compact('produtos'));
 })->name('CatalogoF');
 
 Route::get('/catalogo', [ProdutoCatalogoController::class, 'index'])->name('catalogo');
+
 
 Route::get('/catalogo_Sinalizar', function () {
     $path = public_path('Catalogo/Catálogo_Sinalizar.pdf');
