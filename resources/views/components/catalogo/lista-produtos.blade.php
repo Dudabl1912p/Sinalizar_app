@@ -1,6 +1,6 @@
 @if ($produtos->count())
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-4">
-    @foreach ($produtos as $produto)
+    @foreach ($produto as $produto)
     <div class="col">
         <div class="card h-100 shadow-sm d-flex flex-column">
             @if ($produto->imagem)
