@@ -9,21 +9,21 @@ class ProdutoCatalogoController extends Controller
 {
     public function index(Request $request)
     {
-        $busca = trim($request->input('busca'));
-        $categoria = trim($request->input('categoria'));
+    $busca = trim($request->input('busca'));
+    $categoria = trim($request->input('categoria'));
 
-        $query = Produto::query();
+    $query = Produto::query();
 
-        if (!empty($busca)) {
-            $query->where('nome', 'like', '%' . $busca . '%');
-        }
+    if (!empty($busca)) {
+        $query->where('nome', 'like', '%' . $busca . '%');
+    }
 
-        if (!empty($categoria)) {
-            $query->where('categoria', $categoria);
-        }
+    if (!empty($categoria)) {
+        $query->where('categoria', $categoria);
+    }
 
-        $produtos = $query->paginate(12);
+    $produtos = $query->paginate(12);
 
-        return view('Pages.CatalogoF', compact('produtos', 'busca', 'categoria'));
+    return view('Pages.CatalogoF', compact('produtos', 'busca', 'categoria'));
     }
 }
