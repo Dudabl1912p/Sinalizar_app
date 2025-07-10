@@ -10,7 +10,7 @@
 @endphp
 
 {{-- CARROSSEL: MOBILE (1 vídeo por slide) --}}
-<div id="carouselVideosMobile" class="carousel slide d-block d-sm-none mb-4" data-bs-ride="carousel">
+<div id="carouselVideosMobile" class="carousel slide d-block d-sm-none mb-5" data-bs-ride="carousel">
     <div class="carousel-inner text-center">
         @foreach ($videos as $index => $video)
             <div class="carousel-item @if($index === 0) active @endif">
