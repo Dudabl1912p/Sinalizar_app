@@ -23,7 +23,7 @@ Route::get('/CatalogoF', function (Request $request) {
 
     $produto = $query->paginate(12);
 
-    return view('Pages.CatalogoF', compact('produto'));
+    return view('Pages.CatalogoF', compact('produtos'));
 })->name('CatalogoF');
 
 Route::get('/catalogo', [ProdutoCatalogoController::class, 'index'])->name('catalogo');
