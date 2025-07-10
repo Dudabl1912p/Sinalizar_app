@@ -21,8 +21,7 @@ Route::get('/CatalogoF', function (Request $request) {
         $query->where('nome', 'like', '%' . $request->busca . '%');
     }
 
-    $produtos = $produtos = Produto::paginate(12);
-
+    $produtos = $query->paginate(12);
 
     return view('Pages.CatalogoF', compact('produtos'));
 })->name('CatalogoF');
