@@ -9,16 +9,20 @@ class ProdutoCatalogoController extends Controller
 {
     public function index(Request $request)
     {
-        $busca = $request->input('busca');
-        $categoria = $request->input('categoria');
+        $busca = trim($request->input('busca'));
+        $categoria = trim($request->input('categoria'));
 
-        $produtos = Produto::when($busca, function ($query, $busca) {
-            return $query->where('nome', 'like', '%' . $busca . '%');
-        })
-            ->when($categoria, function ($query, $categoria) {
-                return $query->where('categoria', $categoria);
-            })
-            ->paginate(12);
+        $query = Produto::query();
+
+        if (!empty($busca)) {
+            $query->where('nome', 'like', '%' . $busca . '%');
+        }
+
+        if (!empty($categoria)) {
+            $query->where('categoria', $categoria);
+        }
+
+        $produtos = $query->paginate(12);
 
         return view('Pages.CatalogoF', compact('produtos', 'busca', 'categoria'));
     }
