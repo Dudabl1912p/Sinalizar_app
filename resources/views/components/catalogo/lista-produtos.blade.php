@@ -1,4 +1,4 @@
-@if ($produtos->count())
+@if ($produto->count())
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-4">
     @foreach ($produto as $produto)
     <div class="col">
@@ -20,7 +20,7 @@
 </div>
 
 <div class="mt-4">
-    {{ $produtos->withQueryString()->links() }}
+    {{ $produto->withQueryString()->links() }}
 </div>
 @else
 <p>Nenhum produto encontrado.</p>

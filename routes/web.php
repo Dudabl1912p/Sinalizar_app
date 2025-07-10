@@ -21,9 +21,9 @@ Route::get('/CatalogoF', function (Request $request) {
         $query->where('nome', 'like', '%' . $request->busca . '%');
     }
 
-    $produtos = $query->paginate(12);
+    $produto = $query->paginate(12);
 
-    return view('Pages.CatalogoF', compact('produtos'));
+    return view('Pages.CatalogoF', compact('produto'));
 })->name('CatalogoF');
 
 Route::get('/catalogo', [ProdutoCatalogoController::class, 'index'])->name('catalogo');
