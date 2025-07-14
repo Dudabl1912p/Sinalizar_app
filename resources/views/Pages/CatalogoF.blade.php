@@ -19,7 +19,7 @@
             <h2 class="fw-bold mb-4">Nossa coleção de produtos e serviços</h2>
 
             <!-- Barra de pesquisa -->
-            <form action="{{ route('catalogoF') }}" method="GET" class="input-group mb-4">
+            <form action="{{ route('CatalogoF') }}" method="GET" class="input-group mb-4">
                 <input type="text" name="busca" class="form-control" placeholder="Busque por um item" value="{{ request('busca') }}">
                 <button class="btn btn-outline-secondary" type="submit">
                     <i class="bi bi-search"></i>

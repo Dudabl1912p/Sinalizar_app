@@ -14,7 +14,7 @@ Route::get('/Catalogo_construcao', function () {
 })->name('Catalogo_construcao');
 
 
-Route::get('/CatalogoF', [ProdutoCatalogoController::class, 'index']);
+Route::get('/CatalogoF', [ProdutoCatalogoController::class, 'index'])->name('CatalogoF');
 
 Route::get('/catalogo_Sinalizar', function () {
     $path = public_path('Catalogo/Catálogo_Sinalizar.pdf');
