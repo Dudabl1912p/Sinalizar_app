@@ -4,6 +4,7 @@ use App\Http\Controllers\ProdutoCatalogoController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Models\Produto;
+use Illuminate\Support\Facades\DB;
 
 Route::get('/', function () {
     return view('Pages/index');
@@ -24,7 +25,7 @@ Route::get('/catalogo_Sinalizar', function () {
 });
 Route::get('/test-db', function () {
     try {
-        Produto::connection()->getPdo();
+        DB::connection()->getPdo();
         return 'Conexão com banco OK!';
     } catch (\Exception $e) {
         return 'Erro: ' . $e->getMessage();
