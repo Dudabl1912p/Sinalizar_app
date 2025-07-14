@@ -4,7 +4,7 @@
         ['id' => 'q_5JLE16jSg', 'titulo' => 'Profissionalismo, prazo e profissionais de qualidade você só encontra na Sinalizar.'],
         ['id' => 'CqE34gimddU', 'titulo' => 'Curta comente e compartilhe nossos conteudos nas midias sociais.'],
         ['id' => 'VUt38IEFS8E', 'titulo' => 'Acompanhe nossas novidades através das nossas midias digitais'],
-        ['id' => 'ZbZSe6N_BXs', 'titulo' => 'Profissionalismo, prazo e profissionais de qualidade você só encontra na Sinalizar.'],
+        ['id' => 'K0MVDRWoi5c', 'titulo' => 'Profissionalismo, prazo e profissionais de qualidade você só encontra na Sinalizar.'],
         ['id' => 'XcQY6Ej2rKw', 'titulo' => 'Curta comente e compartilhe nossos conteudos nas midias sociais.'],
     ]);
 @endphp
