@@ -42,15 +42,30 @@
 </div>
 
 <script>
-    document.querySelectorAll('.produto-item').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const nomeProduto = this.dataset.produto;
-            const inputBusca = document.querySelector('input[name="busca"]');
-            if (inputBusca) {
-                inputBusca.value = nomeProduto;
-                inputBusca.form.submit();
+
+    document.querySelectorAll('.categoria-item').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const categoria = this.dataset.categoria;
+            const form = document.querySelector('form');
+            if (form) {
+                let inputCategoria = form.querySelector('input[name="categoria"]');
+                if (!inputCategoria) {
+                    inputCategoria = document.createElement('input');
+                    inputCategoria.type = 'hidden';
+                    inputCategoria.name = 'categoria';
+                    form.appendChild(inputCategoria);
+                }
+                inputCategoria.value = categoria;
+
+                // Limpa campo de busca, se houver
+                const inputBusca = form.querySelector('input[name="busca"]');
+                if (inputBusca) inputBusca.value = '';
+
+                form.submit();
             }
         });
     });
+
+
 </script>
 @endsection

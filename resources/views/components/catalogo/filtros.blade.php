@@ -9,31 +9,31 @@ $agrupadoPorCategoria = Produto::all()->groupBy('categoria');
 
     <div class="accordion" id="accordionCategorias">
         @foreach ($agrupadoPorCategoria as $categoria => $produtos)
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="heading-{{ Str::slug($categoria) }}">
-                    <button class="accordion-button collapsed text-uppercase fw-semibold small" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-{{ Str::slug($categoria) }}"
-                        aria-expanded="false" aria-controls="collapse-{{ Str::slug($categoria) }}">
-                        {{ $categoria }}
-                    </button>
-                </h2>
-                <div id="collapse-{{ Str::slug($categoria) }}" class="accordion-collapse collapse"
-                    aria-labelledby="heading-{{ Str::slug($categoria) }}" data-bs-parent="#accordionCategorias">
-                    <div class="accordion-body py-2 ps-4">
-                        <ul class="list-unstyled mb-0">
-                            @foreach ($produtos as $produto)
-                                <li>
-                                    <button type="button"
-                                        class="btn btn-link text-decoration-none text-dark p-0 produto-item"
-                                        data-produto="{{ $produto->nome }}">
-                                        {{ $produto->nome }}
-                                    </button>
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading-{{ Str::slug($categoria) }}">
+                <button class="accordion-button collapsed text-uppercase fw-semibold small" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse-{{ Str::slug($categoria) }}"
+                    aria-expanded="false" aria-controls="collapse-{{ Str::slug($categoria) }}">
+                    {{ $categoria }}
+                </button>
+            </h2>
+            <div id="collapse-{{ Str::slug($categoria) }}" class="accordion-collapse collapse"
+                aria-labelledby="heading-{{ Str::slug($categoria) }}" data-bs-parent="#accordionCategorias">
+                <div class="accordion-body py-2 ps-4">
+                    <ul class="list-unstyled mb-0">
+                        @foreach ($produtos as $produto)
+                        <li>
+                            <button type="button"
+                                class="btn btn-link text-decoration-none text-dark p-0 categoria-item"
+                                data-categoria="{{ $categoria }}">
+                                {{ $produto->nome }}
+                            </button>
+                        </li>
+                        @endforeach
+                    </ul>
                 </div>
             </div>
+        </div>
         @endforeach
     </div>
 </div>
