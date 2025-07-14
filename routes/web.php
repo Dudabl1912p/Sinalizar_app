@@ -4,7 +4,7 @@ use App\Http\Controllers\ProdutoCatalogoController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Models\Produto;
-use Illuminate\Support\Facades\DB;
+
 
 Route::get('/', function () {
     return view('Pages/index');
@@ -23,11 +23,6 @@ Route::get('/catalogo_Sinalizar', function () {
         'Content-Type' => 'application/pdf',
     ]);
 });
-Route::get('/test-db', function () {
-    try {
-        DB::connection()->getPdo();
-        return 'Conexão com banco OK!';
-    } catch (\Exception $e) {
-        return 'Erro: ' . $e->getMessage();
-    }
+Route::get('/produtos-test', function () {
+    return Produto::all();
 });
