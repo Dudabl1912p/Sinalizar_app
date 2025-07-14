@@ -14,20 +14,7 @@ Route::get('/Catalogo_construcao', function () {
 })->name('Catalogo_construcao');
 
 
-Route::get('/CatalogoF', function (Request $request) {
-    $query = Produto::query();
-
-    if ($request->has('busca')) {
-        $query->where('nome', 'like', '%' . $request->busca . '%');
-    }
-
-    $produtos = $query->paginate(12);
-
-    return view('Pages.CatalogoF', compact('produtos'));
-})->name('CatalogoF');
-
-Route::get('/catalogo', [ProdutoCatalogoController::class, 'index'])->name('catalogo');
-
+Route::get('/CatalogoF', [ProdutoCatalogoController::class, 'index']);
 
 Route::get('/catalogo_Sinalizar', function () {
     $path = public_path('Catalogo/Catálogo_Sinalizar.pdf');
