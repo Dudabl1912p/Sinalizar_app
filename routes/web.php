@@ -22,3 +22,11 @@ Route::get('/catalogo_Sinalizar', function () {
         'Content-Type' => 'application/pdf',
     ]);
 });
+Route::get('/test-db', function () {
+    try {
+        Produto::connection()->getPdo();
+        return 'Conexão com banco OK!';
+    } catch (\Exception $e) {
+        return 'Erro: ' . $e->getMessage();
+    }
+});
