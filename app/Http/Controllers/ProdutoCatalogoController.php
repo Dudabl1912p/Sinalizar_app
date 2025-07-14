@@ -24,6 +24,6 @@ class ProdutoCatalogoController extends Controller
 
     $produtos = $query->paginate(12);
 
-    return view('Pages.teste', compact('produtos'));
+    return view('Pages.CatalogoF', compact('produtos', 'busca', 'categoria'));
     }
 }
