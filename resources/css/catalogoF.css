@@ -74,3 +74,7 @@ main{
     background-color: #333;  /* fundo cinza escuro ao passar o mouse */
     color: #fff;
 }
+
+.cursor-pointer {
+    cursor: zoom-in;
+}

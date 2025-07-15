@@ -1,14 +1,16 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-blur shadow-sm">
-    <div class="container px-4">
+    <div class="container px-4 position-relative">
         <!-- LOGO -->
         <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
             <img src="{{ asset('imagens/logo.png') }}" alt="Logo Sinalizar" height="40">
         </a>
 
         <!-- BOTÃO HAMBÚRGUER -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="position-absolute top-0 end-0 mt-3 me-3 d-lg-none">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
 
         <!-- MENU -->
         <div class="collapse navbar-collapse justify-content-end" id="menuPrincipal">
