@@ -57,3 +57,20 @@ main{
     height: 100%;
     object-fit: cover;
 }
+
+/* Estilo para a paginação */
+.pagination .page-link {
+    color: #000;             /* texto preto */
+    border-color: #000;      /* borda preta */
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #000;  /* fundo preto */
+    color: #fff;             /* texto branco */
+    border-color: #000;
+}
+
+.pagination .page-link:hover {
+    background-color: #333;  /* fundo cinza escuro ao passar o mouse */
+    color: #fff;
+}

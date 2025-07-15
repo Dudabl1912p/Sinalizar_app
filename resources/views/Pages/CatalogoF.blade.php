@@ -18,6 +18,25 @@
         <div class="col-md-8 col-lg-9">
             <h2 class="fw-bold mb-4">Nossa coleção de produtos e serviços</h2>
 
+            @if ($categoria || $busca)
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                    @if ($categoria)
+                    <span class="fw-semibold">Filtrando por categoria: <span class="text-primary">{{ $categoria }}</span></span>
+                    @endif
+
+                    @if ($busca)
+                    <span class="fw-semibold">Buscando por: <span class="text-primary">{{ $busca }}</span></span>
+                    @endif
+                </div>
+
+                <a href="{{ route('CatalogoF') }}" class="btn btn-outline-secondary btn-sm">
+                    Limpar filtros
+                </a>
+            </div>
+            @endif
+
+
             <!-- Barra de pesquisa -->
             <form action="{{ route('CatalogoF') }}" method="GET" class="input-group mb-4">
                 <input type="text" name="busca" class="form-control" placeholder="Busque por um item" value="{{ request('busca') }}">
@@ -41,16 +60,5 @@
 
 </div>
 
-<script>
-    document.querySelectorAll('.produto-item').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const nomeProduto = this.dataset.produto;
-            const inputBusca = document.querySelector('input[name="busca"]');
-            if (inputBusca) {
-                inputBusca.value = nomeProduto;
-                inputBusca.form.submit();
-            }
-        });
-    });
 </script>
 @endsection

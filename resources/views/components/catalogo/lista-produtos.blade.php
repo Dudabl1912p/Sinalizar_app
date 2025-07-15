@@ -5,7 +5,7 @@
         <div class="card h-100 shadow-sm d-flex flex-column">
             @if ($produto->imagem)
             <div class="card-img-container ratio-custom">
-                <img src="{{ asset($produto->imagem) }}" alt="{{ $produto->nome }}">
+                <img src="{{ asset($produto->imagem) }}" alt="{{ $produto->nome }}" loading="lazy">
             </div>
             @else
             <div class="ratio ratio-4x3 bg-secondary"></div>
@@ -18,7 +18,7 @@
     @endforeach
 </div>
 
-<div class="mt-4">
+<div class="d-flex justify-content-center mt-4">
     {{ $produtos->withQueryString()->links() }}
 </div>
 @else

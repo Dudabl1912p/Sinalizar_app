@@ -1,39 +1,39 @@
 @php
-use App\Models\Produto;
+use Illuminate\Support\Facades\DB;
 
-$agrupadoPorCategoria = Produto::all()->groupBy('categoria');
+$agrupadoPorCategoria = DB::table('produto2s')
+->select('categoria', DB::raw('COUNT(*) as total'))
+->groupBy('categoria')
+->orderBy('categoria')
+->get();
 @endphp
 
 <div class="mb-4">
     <h5 class="border-start border-warning ps-2 mb-3">Categorias</h5>
 
     <div class="accordion" id="accordionCategorias">
-        @foreach ($agrupadoPorCategoria as $categoria => $produtos)
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="heading-{{ Str::slug($categoria) }}">
-                    <button class="accordion-button collapsed text-uppercase fw-semibold small" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapse-{{ Str::slug($categoria) }}"
-                        aria-expanded="false" aria-controls="collapse-{{ Str::slug($categoria) }}">
-                        {{ $categoria }}
+        @foreach ($agrupadoPorCategoria as $categoriaObj)
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading-{{ Str::slug($categoriaObj->categoria) }}">
+                <button class="accordion-button collapsed text-uppercase fw-semibold small" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapse-{{ Str::slug($categoriaObj->categoria) }}"
+                    aria-expanded="false" aria-controls="collapse-{{ Str::slug($categoriaObj->categoria) }}">
+                    {{ $categoriaObj->categoria }}
+                </button>
+            </h2>
+            <div id="collapse-{{ Str::slug($categoriaObj->categoria) }}" class="accordion-collapse collapse"
+                aria-labelledby="heading-{{ Str::slug($categoriaObj->categoria) }}" data-bs-parent="#accordionCategorias">
+                <div class="accordion-body py-2 ps-4">
+                    <form method="GET" action="{{ route('CatalogoF') }}">
+                    <input type="hidden" name="categoria" value="{{ $categoriaObj->categoria }}">
+                    <button type="submit" class="btn btn-link text-decoration-none text-dark p-0 w-100 d-flex justify-content-between">
+                        <span>Ver todos</span>
+                        <span class="text-muted small">({{ $categoriaObj->total }})</span>
                     </button>
-                </h2>
-                <div id="collapse-{{ Str::slug($categoria) }}" class="accordion-collapse collapse"
-                    aria-labelledby="heading-{{ Str::slug($categoria) }}" data-bs-parent="#accordionCategorias">
-                    <div class="accordion-body py-2 ps-4">
-                        <ul class="list-unstyled mb-0">
-                            @foreach ($produtos as $produto)
-                                <li>
-                                    <button type="button"
-                                        class="btn btn-link text-decoration-none text-dark p-0 produto-item"
-                                        data-produto="{{ $produto->nome }}">
-                                        {{ $produto->nome }}
-                                    </button>
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
+                </form>
                 </div>
             </div>
+        </div>
         @endforeach
     </div>
 </div>
