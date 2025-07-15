@@ -23,6 +23,3 @@ Route::get('/catalogo_Sinalizar', function () {
         'Content-Type' => 'application/pdf',
     ]);
 });
-Route::get('/produtos-test', function () {
-    return Produto::all();
-});
