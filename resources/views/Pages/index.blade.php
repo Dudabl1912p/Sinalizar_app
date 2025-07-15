@@ -5,10 +5,10 @@
 @section('content')
 
     {{-- Seções separadas --}}
-    @include('components.Hero')
-    @include('components.sobre-nos')
-    @include('components.Servico')
-    @include('components.videos')
-    @include('components.contato')
+    @include('components.index.Hero')
+    @include('components.index.sobre-nos')
+    @include('components.index.Servico')
+    @include('components.index.videos')
+    @include('components.index.contato')
 
 @endsection

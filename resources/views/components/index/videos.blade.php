@@ -4,7 +4,7 @@
             <h2 class="fw-bold border-bottom border-warning d-inline-block pb-2 px-3">Vídeos</h2>
         </div>
 
-        @include('components.videos-carousel')
+        @include('components.index.videos-carousel')
 
         {{-- Botões de redes sociais --}}
         <div class="d-flex justify-content-center gap-3 flex-wrap mt-4"> 
