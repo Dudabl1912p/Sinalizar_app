@@ -31,7 +31,7 @@
                 <h5 class="mb-4">Solicite um atendimento</h5>
                 <p class="mb-5">Preencha o formulário abaixo e nossa equipe retornará o mais breve possível para ajudar com sua solicitação.</p>
 
-                <form action="https://formsubmit.co/sinalizar.sinalizacao@hotmail.com" method="POST" id="formContato">
+                <form action="https://formsubmit.co/sinalizar.sinalizacao.oficial@gmail.com" method="POST" id="formContato">
                     <div class="row mb-3">
                         <div class="col"><input type="text" name="nome" class="form-control rounded-pill" placeholder="Seu nome" required></div>
                         <div class="col"><input type="email" name="email" class="form-control rounded-pill" placeholder="Seu email" required></div>
