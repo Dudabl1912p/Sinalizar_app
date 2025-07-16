@@ -1,3 +1,38 @@
+/*Nav Bar*/
+
+/* Dropdown visual discreto e centralizado */
+.custom-dropdown {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    border: none;
+    padding: 0.25rem 0;
+    border-radius: 0.5rem;
+    min-width: 10rem;
+}
+
+.custom-dropdown .dropdown-item {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+    color: #333;
+    text-align: center; /* <-- CENTRALIZA o texto */
+    justify-content: center; /* <-- se houver elementos internos com flex */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    transition: background-color 0.2s ease;
+}
+
+/* Remove a linha do último item */
+.custom-dropdown .dropdown-item:last-child {
+    border-bottom: none;
+}
+
+/* Hover leve */
+.custom-dropdown .dropdown-item:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+    color: #000;
+}
+
+/*pagina inicial*/
+
 /* Ocupa toda a altura da tela com imagem de fundo */
 .hero {
     background: url('/imagens/fundo2.jpg') no-repeat center center;

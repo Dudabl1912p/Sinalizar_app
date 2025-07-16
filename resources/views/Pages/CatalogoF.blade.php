@@ -22,11 +22,11 @@
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <div>
                     @if ($categoria)
-                    <span class="fw-semibold">Filtrando por categoria: <span class="text-primary">{{ $categoria }}</span></span>
+                    <span class="fw-semibold">Filtrando por categoria: <span class="text-warning">{{ $categoria }}</span></span>
                     @endif
 
                     @if ($busca)
-                    <span class="fw-semibold">Buscando por: <span class="text-primary">{{ $busca }}</span></span>
+                    <span class="fw-semibold">Buscando por: <span class="text-warning">{{ $busca }}</span></span>
                     @endif
                 </div>
 

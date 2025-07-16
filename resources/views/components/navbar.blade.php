@@ -18,8 +18,10 @@
                 <li class="nav-item"><a class="nav-link fw-semibold text-dark" href="{{ route('home') }}">Home</a></li>
                 <li class="nav-item"><a class="nav-link fw-semibold text-dark" href="{{ route('home') }}#SobreN">Sobre nós</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle fw-semibold text-dark" href="#" data-bs-toggle="dropdown">Categorias</a>
-                    <ul class="dropdown-menu">
+                    <a class="nav-link dropdown-toggle fw-semibold text-dark" href="#" data-bs-toggle="dropdown">
+                        Categorias
+                    </a>
+                    <ul class="dropdown-menu custom-dropdown">
                         <li><a class="dropdown-item" href="{{ route('home') }}#Servico">Serviços</a></li>
                         <li><a class="dropdown-item" href="{{ route('home') }}#Videos">Vídeos</a></li>
                         <li><a class="dropdown-item" href="{{ route('home') }}#Contato">Contato</a></li>

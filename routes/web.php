@@ -23,3 +23,10 @@ Route::get('/catalogo_Sinalizar', function () {
         'Content-Type' => 'application/pdf',
     ]);
 });
+
+Route::get('/catalogo_Sinalizar2', function () {
+    $path = public_path('Catalogo/Catalogo_Sinalizar2.pdf');
+    return response()->file($path, [
+        'Content-Type' => 'application/pdf',
+    ]);
+});
