@@ -36,9 +36,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const mensagem = mensagemInput.value.trim();
 
         // Regras de validação
-        if (!nome || nome.split(' ').length < 2) {
+        if (!nome || nome.trim() === '') {
             valid = false;
-            mensagens.push('Digite seu nome completo.');
+            mensagens.push('Digite seu nome.');
         }
 
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
