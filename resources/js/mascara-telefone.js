@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const mensagem = mensagemInput.value.trim();
 
         // Regras de validação
-        if (!nome || nome.trim() === '') {
+        if (!nome || nome.length < 3) {
             valid = false;
             mensagens.push('Digite seu nome.');
         }
