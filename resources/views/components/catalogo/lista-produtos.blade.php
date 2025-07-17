@@ -11,7 +11,8 @@
                     loading="lazy"
                     data-bs-toggle="modal"
                     data-bs-target="#imagemModal"
-                    data-img="{{ asset($produto->imagem) }}">
+                    data-img="{{ asset($produto->imagem) }}"
+                    data-nome="{{ $produto->nome }}">
             </div>
             @else
             <div class="ratio ratio-4x3 bg-secondary"></div>
@@ -23,13 +24,14 @@
     </div>
     @endforeach
     <!-- Modal de imagem -->
-    <!-- Modal de imagem menor -->
+
     <div class="modal fade" id="imagemModal" tabindex="-1" aria-labelledby="imagemModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-md">
             <div class="modal-content bg-white p-3 rounded shadow">
-                <div class="modal-body d-flex justify-content-center align-items-center p-3" style="min-height: 300px;">
+                <div class="modal-body d-flex flex-column justify-content-center align-items-center p-3" style="min-height: 300px;">
                     <button type="button" class="btn-close position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Fechar"></button>
                     <img id="imagemModalExibida" src="" class="img-fluid rounded" alt="Imagem do produto">
+                    <h5 id="modalNomeProduto" class="text-center mt-3"></h5>
                 </div>
             </div>
         </div>
@@ -44,14 +46,16 @@
 @endif
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const modal = document.getElementById('imagemModal');
-        const modalImg = document.getElementById('imagemModalExibida');
+    const imagemModal = document.getElementById('imagemModal');
+    const imagemExibida = document.getElementById('imagemModalExibida');
+    const nomeProduto = document.getElementById('modalNomeProduto');
 
-        modal.addEventListener('show.bs.modal', function(event) {
-            const triggerImg = event.relatedTarget;
-            const src = triggerImg.getAttribute('data-img');
-            modalImg.src = src;
-        });
+    imagemModal.addEventListener('show.bs.modal', function (event) {
+        const trigger = event.relatedTarget;
+        const imagem = trigger.getAttribute('data-img');
+        const nome = trigger.getAttribute('data-nome');
+
+        imagemExibida.src = imagem;
+        nomeProduto.textContent = nome;
     });
 </script>
