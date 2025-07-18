@@ -22,7 +22,7 @@ class ProdutoCatalogoController extends Controller
             $query->where('categoria', $categoria);
         }
 
-        $produtos = $query->paginate(12)->appends($request->except('page'));
+        $produtos = $query->paginate(11)->appends($request->except('page'));
 
         return view('Pages.CatalogoF', compact('produtos', 'busca', 'categoria'));
     }
