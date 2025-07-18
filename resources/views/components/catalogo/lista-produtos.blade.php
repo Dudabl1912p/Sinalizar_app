@@ -1,25 +1,6 @@
 @if ($produtos->count())
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-4">
 
-    {{-- Card fixo de aviso com imagem --}}
-    <div class="col">
-        <div class="card h-100 shadow-sm d-flex flex-column">
-            <div class="card-img-container ratio-custom">
-                <img src="{{ asset('produtos/Aviso.png') }}"
-                    alt="Aviso"
-                    class="img-fluid cursor-pointer"
-                    loading="lazy"
-                    data-bs-toggle="modal"
-                    data-bs-target="#imagemModal"
-                    data-img="{{ asset('produtos/Aviso.png') }}"
-                    data-nome="Aviso Importante">
-            </div>
-            <div class="card-body text-center p-3 mt-auto">
-                <p class="card-text mb-0 text-truncate" title="Aviso Importante">Aviso Importante</p>
-            </div>
-        </div>
-    </div>
-
     {{-- Produtos dinâmicos --}}
     @foreach ($produtos as $produto)
     <div class="col">
@@ -44,6 +25,25 @@
         </div>
     </div>
     @endforeach
+
+    {{-- Card fixo de aviso com imagem --}}
+    <div class="col">
+        <div class="card h-100 shadow-sm d-flex flex-column">
+            <div class="card-img-container ratio-custom">
+                <img src="{{ asset('produtos/Aviso.png') }}"
+                    alt="Aviso"
+                    class="img-fluid cursor-pointer"
+                    loading="lazy"
+                    data-bs-toggle="modal"
+                    data-bs-target="#imagemModal"
+                    data-img="{{ asset('produtos/Aviso.png') }}"
+                    data-nome="Aviso Importante">
+            </div>
+            <div class="card-body text-center p-3 mt-auto">
+                <p class="card-text mb-0 text-truncate" title="Aviso Importante">Aviso Importante</p>
+            </div>
+        </div>
+    </div>
     <!-- Modal de imagem -->
 
     <div class="modal fade" id="imagemModal" tabindex="-1" aria-labelledby="imagemModalLabel" aria-hidden="true">
