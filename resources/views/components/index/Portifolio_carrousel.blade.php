@@ -129,14 +129,20 @@
 }
 
 @media (max-width: 576px) {
+    /* Celular — imagens menores */
     .carousel .img-container {
         aspect-ratio: 4 / 3;
+        max-width: 90%; /* menor largura */
+        margin: 0 auto;
     }
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
+    /* Tablet — imagens maiores */
     .carousel .img-container {
         aspect-ratio: 16 / 9;
+        max-width: 95%; /* maior largura que no celular */
+        margin: 0 auto;
     }
 }
 </style>
